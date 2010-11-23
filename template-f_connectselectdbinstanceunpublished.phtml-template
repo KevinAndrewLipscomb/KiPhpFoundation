@@ -2,7 +2,7 @@
 //
 // $Id: f_connectselectdb.phtml 578 2002-03-11 19:53:12Z kevinanlipscomb $
 //
-function ConnectSelectDbInstance()
+function ConnectSelectDbInstanceUNPUBLISHED()
    {
    $saved_error_level = error_reporting(E_ALL);
    $success = FALSE;
