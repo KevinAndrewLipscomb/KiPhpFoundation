@@ -9,7 +9,7 @@ function BeValidEmailAddress
    )
 {
    //Do the basic Reg Exp Matching for simple validation
-   if (eregi("^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]", $Email)) { 
+   if (preg_match("/^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]/i", $Email)) { 
            return FALSE; 
    }
    
@@ -19,7 +19,7 @@ function BeValidEmailAddress
    //If you get an mx record then this is a valid email domain
    if(getmxrr($Domain, $MXHost)) {
        return TRUE;
-       if($mode) { echo "$Domain<BR>getmxrr worked."; }
+       // if($mode) { echo "$Domain<BR>getmxrr worked."; }
    }
    else {    
        //else use the domain given to try and connect on port 25
