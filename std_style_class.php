@@ -1,13 +1,13 @@
 <?php
+class std_style_class
 //
 // $Id$
 //
-class std_style_class
 {
 //
 // AolEmailClientWarning
 //
-function AolEmailClientWarning()
+static function AolEmailClientWarning()
    {
    return "<table bgcolor=#ff9933 cellpadding=5 width=40%>\n"
         . "   <tr>\n"
@@ -26,7 +26,7 @@ function AolEmailClientWarning()
 //
 // CatchUpBlurb
 //
-function CatchUpBlurb()
+static function CatchUpBlurb()
    {
    return "<small><a href=foundation-whats-new.phtml><b>Catch up</b></a> on changes to the KVEO-IT-PROJECT Foundation "
         . "Class Library.</small>\n"
