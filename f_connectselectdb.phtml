@@ -12,9 +12,9 @@ function ConnectSelectDb
    {
    $saved_error_level = error_reporting(E_ALL);
    $success = FALSE;
-   if (@mysqli_connect($hostname,$username,$password))
+   if ($db_link = @mysqli_connect($hostname,$username,$password))
       {
-      $success = @mysqli_select_db($database_name);
+      $success = @mysqli_select_db($db_link,$database_name);
       }
    error_reporting($saved_error_level);
    return $success;
