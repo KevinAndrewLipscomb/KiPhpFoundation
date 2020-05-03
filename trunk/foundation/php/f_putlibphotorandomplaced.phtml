@@ -11,6 +11,8 @@ function PutLibPhotoRandomPlaced
    $align = ""
    )
    {
+   if (isset($placement)) $placement = kix\k::Safe($placement,kix\k::PhpValueOf_safe_hint_type("HYPHENATED_ALPHANUM_WORDS"));
+   //
    $sql = "select div_spec,frame_num from photo_detail where placement like '%$placement%' order by rand()";
    if ($limit != "") $sql .= " limit $limit";
    //
