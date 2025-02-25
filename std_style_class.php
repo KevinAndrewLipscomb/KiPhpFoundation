@@ -1,7 +1,7 @@
 <?php
 class std_style_class
 //
-// $Id$
+// $Id: std_style_class.php 7041 2020-04-15 23:21:02Z kevinanlipscomb $
 //
 {
 //
